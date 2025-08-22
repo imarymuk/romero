@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: "Figtree", sans-serif;
+  --font-mono: "Figtree", monospace;
+}
+
+html {
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  background: transparent;
+  color: #3d3935;
+  line-height: 34px;
+}
+
+p {
+  font-size: 1.75rem;
+}
+
+.chat-container {
+  padding: 3.125rem 3.375rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 1.25rem rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 990px;
+  min-height: 100vh;
+  margin-left: auto;
+  background: #f8f9fa;
+}
+
+.agent-container,
+.customer-container {
+  margin-left: auto;
+  margin-right: 0px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.agent-container{
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.customer-container {
+  margin-left: 0px;
+  margin-right: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 610px;
+  width: 100%;
+}
+
+.customer-container .customer-avatar {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.agent-container .chat-bubble {
+  background-color: #3d3935;
+  color: white;
+  padding: 1.25rem 2.75rem;
+  border-radius: 1.25rem 0px 1.25rem 1.25rem;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 18px;
+  max-width: 500px;
+}
+
+.customer-container .chat-bubble {
+  background-color: #f0efef;
+  color: #3d3935;
+  padding: 1.25rem 2.75rem;
+  border-radius: 0px 1.25rem 1.25rem 1.25rem;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 18px;
+  max-width: 500px;
+  width: max-content;
+}
+
+.css-h89yrz > :last-child {
+  margin-bottom: 0px;
+}
+
+.emojis {
+  display: grid;
+  width: 100%;
+  margin-bottom: 8px;
+  grid-template-columns: repeat(100, 1fr);
+}
+
+.emoji {
+  display: flex;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: 0px auto;
+}
+
+.emoji-happy {
+  grid-column-start: 10;
+}
+
+.emoji-neutral {
+  grid-column-start: 35;
+}
+
+.emoji-angry {
+  grid-column-start: 75;
+}
+
+.css-i6k5v0 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+.css-i6k5v0 .scale-container {
+  width: 100%;
+  min-height: 16px;
+  padding: 2px;
+  border: 3px solid rgb(61, 57, 53);
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+}
+
+.css-4wjyey {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  width: 100%;
+  height: 14px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background: linear-gradient(
+    to right,
+    rgb(143, 210, 0) 8px,
+    rgb(255, 200, 5) 35%,
+    rgb(191, 7, 96) calc(100% - 8px)
+  );
+  border-radius: 25px;
+}
+
+.meter {
+  max-width: 600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.meter .needle {
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  left: 0%;
+  width: 16px;
+  height: 28px;
+  background-image: url(/icons/needle.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform-origin: 50% 100%;
+  transition: left 1s ease-in-out;
+  --needle-position: 0%;
+}
+
+.meter .needle.animated {
+  left: var(--needle-position);
+}
+
+.feedback-container,
+.choice-container {
+  padding: 2.5rem 3rem;
+  margin-top: 2rem;
+}
+
+.option-selected {
+  margin-top: 0;
+}
+
+.option-selected {
+  width: 100% ;
+}
+
+.btn {
+  padding: 24px 44px;
+  background-color: #DA291C;
+  color: white;
+  cursor: pointer;
+  font-size: 28px;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.btn.btn-primary {
+  border: 2px solid #DA291C;
+  background: transparent;
+  color: #DA291C;
+}
+
+.btn-secondary {
+  border-radius: 1.5rem;
+}
+
+.btn-tertiary{
+  width: max-content;
+  background: transparent;
+  color: #DA291C;
+  border: 2px solid #DA291C;
+  border-radius: 1000px;
+}
+
+.btn-tertiary:hover,
+.btn.btn-primary:hover{
+  background-color: transparent !important;
+  color: #7F1A0D;
+  border-color: #7F1A0D;
+}
+
+.btn:hover {
+  background-color: #7F1A0D;
+}
+
+.app-border {
+  margin: 44px auto;
+  width: 100%;
+  max-width: 80%;
+  border-top: 1px solid rgba(61, 57, 53, 0.28);
+}
+
+.reaction-emojis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem auto;
+}
+
+/* .app-border:first-of-type{
+  margin-top: 0px;
+} */

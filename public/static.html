@@ -1,0 +1,146 @@
+<div className="App">
+      <div className="chat-container">
+        <div className="app-border"></div>
+        <p className="text-center max-w-md text-lg mx-auto">
+          Mr. Romero is already annoyed before his conversation with you. Make the right decisions to reduce his frustration and restore his satisfaction.
+        </p>
+        {/* <p className="font-bold mx-auto text-center text-2xl mt-16">
+          [Barometer initial level: 50]
+        </p>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="185"
+          height="58"
+          fill="none"
+          viewBox="0 0 185 58"
+          className="mt-10"
+        >
+          <path
+            fill="#3D3935"
+            d="M17 32a4 4 0 0 0 8 0h-8m4-28h-4v28h8V4zM53 32a4 4 0 0 0 8 0h-8m4-28h-4v28h8V4zM35 22a4 4 0 0 0 8 0h-8m4-18h-4v18h8V4zM71 22a4 4 0 0 0 8 0h-8m4-18h-4v18h8V4zM107 22a4 4 0 0 0 8 0h-8m4-18h-4v18h8V4zM143 22a4 4 0 0 0 8 0h-8m4-18h-4v18h8V4zM89 32a4 4 0 0 0 8 0h-8m4-28h-4v28h8V4zM125 32a4 4 0 0 0 8 0h-8m4-28h-4v28h8V4zM161 32a4 4 0 0 0 8 0h-8m4-28h-4v28h8V4z"
+          ></path>
+          <rect
+            width="177"
+            height="50"
+            x="4"
+            y="4"
+            stroke="#3D3935"
+            strokeWidth="8"
+            rx="6"
+          ></rect>
+        </svg>
+        <p className="font-extrabold mx-auto text-center text-2xl mt-4">50%</p> */}
+
+        <p className="text-center max-w-md text-lg mx-auto mt-8">
+          How would you like to start the conversation?
+        </p>
+
+        <div className="mt-20 w-full">
+          <div className="agent-container">
+            <div className="chat-bubble agent">
+              Hi, I am the Sunrise Customer Service Agent. How can I assist you today?
+            </div>
+          </div>
+
+          <div className="customer-container">
+            <img
+              src="/chat-avatar-romero.png"
+              alt="Chat bubble Romero"
+              className="customer-avatar"
+            />
+
+            <SequentialCustomerMessages 
+              messages={[
+                "Yes, it's great how you are welcomed here...",
+                "This is Romero, Tobias."
+              ]}
+              className="chat-bubble customer"
+            />
+          </div>
+        </div>
+
+        <div className="feedback-container">
+          <div className="flex items-center justify-center gap-2">
+            <img
+              src="/icons/emoji-angry-with-background.svg"
+              alt="Angry Icon"
+              className="size-15"
+            />
+            <img
+              src="/icons/emoji-angry-with-background.svg"
+              alt="Angry Icon"
+              className="size-15"
+            />
+          </div>
+          <p className="font-extrabold mx-auto text-center text-2xl my-7">
+            Current frustration level: 50+2=52
+          </p>
+          <div className="meter css-i6k5v0">
+            <div className="emojis">
+              <img
+                className="emoji emoji-happy"
+                src="/icons/emoji-happy.svg"
+                alt="Happy Emoji"
+              />
+              <img
+                className="emoji emoji-neutral"
+                src="/icons/emoji-neutral.svg"
+                alt="Neutral Emoji"
+              />
+              <img
+                className="emoji emoji-angry"
+                src="/icons/emoji-angry.svg"
+                alt="Angry Emoji"
+              />
+            </div>
+            <div className="scale-container">
+              <div className="ui-div scale css-4wjyey"></div>
+              <div className="needle" data-projection-id="72"></div>
+            </div>
+          </div>
+          <p className="text-center max-w-lg text-lg mx-auto mt-8">
+            You realise that the curt greeting didn't make the customer feel
+            welcome. In future, use the greeting to get the conversation off to
+            a good start and make it positive right from the start.
+          </p>
+        </div>
+
+        <div className="choice-container">
+          <p className="text-center max-w-lg text-lg mx-auto">
+            To better understand Mr. Romero's emotional reaction, it is helpful
+            to consider the source of his frustration. What does this
+            frustration lie in the current situation?
+          </p>
+          <div className="flex flex-col gap-3 mt-8">
+            <button className="btn btn-primary">Goal</button>
+            <button className="btn btn-primary">Dependance</button>
+            <button className="btn btn-primary">Urgency</button>
+            <button className="btn btn-primary">Important</button>
+          </div>
+        </div>
+
+        <div className="option-selected">
+          <p className="text-center max-w-lg text-lg mx-auto">Goal</p>
+        </div>
+        <div className="option-selected">
+          <p className="text-center max-w-lg text-lg mx-auto">
+            Frustration can, of course, have many causes. Urgency is clearly the
+            primary concern here. Mr. Romero is worried that he won't be able to
+            keep his scheduled appointment tomorrow.
+          </p>
+        </div>
+
+        <div className="choice-container">
+          <p className="text-center max-w-lg text-lg mx-auto">
+            How would you like to respond to Mr. Romero’s concerns?
+          </p>
+          <div className="flex flex-col gap-3 mt-8">
+            <button className="btn btn-secondary">Yes, Mr Romero, that's annoying. Why are you only calling now?</button>
+            <button className="btn btn-secondary">I can understand your frustration, Mr Romero. I'll do my best to get the Internet up and running.</button>
+            <button className="btn btn-secondary">Stay calm, Mr Romero, and give me your customer number first. Then I'll see what's going on.</button>
+          </div>
+          <p className="text-center max-w-xs text-lg mx-auto mt-8">How would you like to respond to Mr. Romero’s concerns?</p>
+        </div>
+      </div>
+    </div>
