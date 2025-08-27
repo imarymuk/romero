@@ -321,30 +321,28 @@ let blocksRaw = {
         {
           label: "I understand your frustration, it's really unfortunate that you have to call again. ",
           nextNode: ""
-        },
-        {
-          type: "customer-message",
-          messages: [
-            "Yes, you can say that again."
-          ]
-        },
-        {
-          type: "system-options",
-          options: [
-            {
-              label: "I'll make sure you have internet at your new address right away.",
-              nextNode: "instant_promise"
-            },
-            {
-              label: "I'll look into what went wrong straight away. Can you give me your customer number, Mr Romero?",
-              nextNode: "ask_customer_no"
-            }
-          ]
         }
-        
+      ]
+    },
+    {
+      type: "customer-message",
+      messages: [
+        "Yes, you can say that again."
+      ]
+    },
+    {
+      type: "system-options",
+      options: [
+        {
+          label: "I'll make sure you have internet at your new address right away.",
+          nextNode: "instant_promise"
+        },
+        {
+          label: "I'll look into what went wrong straight away. Can you give me your customer number, Mr Romero?",
+          nextNode: "ask_customer_no"
+        }
       ]
     }
-
   ],
 
   instant_promise: [
