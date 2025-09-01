@@ -552,7 +552,7 @@ let blocksRaw = {
       ]
     },
     {
-      type: "customer-messages",
+      type: "customer-message",
       messages: [
         "Yes, I hope so. The question then is why nothing has happened yet..."
       ]
