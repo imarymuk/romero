@@ -916,7 +916,7 @@ let blocksRaw = {
 
   agent_response_03: [
     {
-      type: "client-message",
+      type: "customer-message",
       messages: [
         "Yes, please do. Finally someone who understands the urgency.",
       ]
@@ -1466,7 +1466,7 @@ let blocksRaw = {
       options: [
         {
           label: "Ok, then you'll hear from me as soon as your internet is working.",
-          nextNode: "" //stay empty
+          nextNode: "Path_A_end" //end of A
         }
       ]
     },
