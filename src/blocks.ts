@@ -620,10 +620,6 @@ let blocksRaw = {
       options: [
         {
           label: "I'm currently checking the status of the ticket. This will show us the current status of the processing of your request.",
-          nextNode: ""
-        },
-        {
-          type: "reference",
           nextNode: "redirect_to_IT_dep"
         }
       ]
@@ -1685,7 +1681,8 @@ let blocksRaw = {
     },
     {
       type: "customer-message",
-      messages: ["See you later."] //end of Path B opt 3
+      messages: ["See you later."], //end of Path B opt 3
+      last: true
     }
   ]
 
