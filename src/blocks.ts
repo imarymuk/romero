@@ -756,7 +756,7 @@ let blocksRaw = {
 
   reasonable_no: [
     {
-      type: "customer-messages",
+      type: "customer-message",
       messages: [
         "I see."
       ]
@@ -771,7 +771,7 @@ let blocksRaw = {
       ]
     },
     {
-      type: "customer-messages",
+      type: "customer-message",
       messages: [
         "I see."
       ]
