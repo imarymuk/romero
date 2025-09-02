@@ -606,7 +606,7 @@ let blocksRaw = {
       type: "barometer",
       points: +5,
       expression: "angry",
-      message: "In future, make sure you always give the customer the feeling that you have an overview and know what needs to be done."
+      message: "Even if this is the case, such statements give the impression that you want to provide justification. Instead, remain solution-orientated and check what is going on with the ticket."
     },
     {
       type: "reference",
@@ -860,7 +860,7 @@ let blocksRaw = {
       ]
     },
     {
-      type: "baromter",
+      type: "barometer",
       points: +5,
       expression: "angry",
       message: ""
