@@ -678,7 +678,7 @@ let blocksRaw = {
 
   straight_no: [
     {
-      type: "customer-messages",
+      type: "customer-message",
       messages: [
         "Can't or don't you want to...?"
       ]
@@ -1177,7 +1177,7 @@ let blocksRaw = {
       messages: [ "Oh, that's a good idea, but I'm not sure how it works." ]
     },
     {
-      type: "system-option",
+      type: "system-options",
       options: [
         {
           label: "It's not too difficult. There are lots of easy-to-understand instructions on the internet.",
