@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { SystemNote } from "./blocks/system-note";
-import { DELAY_BETWEEN_BLOCKS, PARENT_ANIMATION } from "./constants";
+import { DELAY_BETWEEN_BLOCKS, INITIAL_BAROMETER_READING, PARENT_ANIMATION } from "./constants";
 import { HorizontalBar } from "./blocks/horizontal-bar";
 import { Barometer } from "./blocks/barometer";
 import { SystemOptions } from "./blocks/system-options";
@@ -9,12 +9,13 @@ import { blocks } from "./blocks";
 import { SequentialCustomerMessagesWrapper } from "./blocks/customer-message";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { AppContext, defaultAppContextValue } from "./context/app.context";
+import { setStoryLineVariable } from "./storylineAPI";
 
 function App() {
   const [ blocksTrail, setBlocksTrail ] = useLocalStorage<any[]>('block-trail', []);
   const [ selectedOptions, setSelectedOptions ] = useLocalStorage('selected-options', {});
   const [ visibleBlockIndex, setVisibleBlockIndex ] = useState(0);
-  const [ barometerReading, setBarometerReading ] = useState(50);
+  const [ barometerReading, setBarometerReading ] = useState(INITIAL_BAROMETER_READING);
   const [ isConversationStarted, setIsConversationStarted ] = useState(false);
   const [ defaultContextValue, setDefaultContextValue ] = useState(defaultAppContextValue);
 
@@ -41,7 +42,7 @@ function App() {
     initializeChat();
     setSelectedOptions({});
     setVisibleBlockIndex(0);
-    setBarometerReading(50);
+    setBarometerReading(INITIAL_BAROMETER_READING);
     setIsConversationStarted(true);
   }
 
@@ -49,7 +50,7 @@ function App() {
     appendNextNodes([]);
     setIsConversationStarted(true);
     // Reset the context to initial state
-    setBarometerReading(50);
+    setBarometerReading(INITIAL_BAROMETER_READING);
     setVisibleBlockIndex(0);
     // Reset the context animations
     setDefaultContextValue({
@@ -80,6 +81,12 @@ function App() {
         DELAY_BETWEEN_BLOCKS: DELAY_BETWEEN_BLOCKS,
       });
     }, 1500);
+  }
+
+  const handleLastBlock = () => {
+    // send variable to storyline
+    console.log("Setting storyline variable Mrs_cap_Completed to true");
+    setStoryLineVariable('Mrs_cap_Completed', true);
   }
 
   useEffect(() => {
@@ -146,6 +153,10 @@ function App() {
           className="chat-container"
         >
           {blocksTrail.slice(0, visibleBlockIndex + 1).map((block : any, index) => {
+            if(block.last) {
+              handleLastBlock();
+            }
+
             if (block.type == "horizontal-bar") {
               return <HorizontalBar index={index} key={"horizontal-bar-" + index} className={index == 0 ? '!mt-0' : ''} />;
             }
