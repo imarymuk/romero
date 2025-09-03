@@ -1164,7 +1164,7 @@ let blocksRaw = {
     },
     {
       type: "reference",
-      nexNode: "customer_have_mob_data_02" //this is used in main functions as a options (second opt)
+      nextNode: "customer_have_mob_data_02" //this is used in main functions as a options (second opt)
     }
   ],
 
