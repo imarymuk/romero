@@ -1197,7 +1197,7 @@ let blocksRaw = {
       messages: ["Aren't you also familiar with this and can you explain it to me briefly?"]
     },
     {
-      type: "system-option",
+      type: "system-options",
       options: [
         {
           label: "Yes, of course.",
