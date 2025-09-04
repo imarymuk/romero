@@ -86,7 +86,7 @@ function App() {
   const handleLastBlock = () => {
     // send variable to storyline
     console.log("Setting storyline variable Mrs_cap_Completed to true");
-    setStoryLineVariable('Remero_completed', true);
+    setStoryLineVariable('Romero_completed', true);
   }
 
   useEffect(() => {
